@@ -72,7 +72,6 @@ RUN apt-get install -y python3-distutils
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
-    python get-pip.py && \
     rm get-pip.py
 
 RUN python3 -m pip install -U pip && \
