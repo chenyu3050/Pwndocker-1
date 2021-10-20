@@ -1,5 +1,5 @@
-FROM phusion/baseimage:latest
-MAINTAINER Tac1t0rnX <Tac1t0rnX@163.com>
+FROM phusion/baseimage:bionic-1.0.0
+MAINTAINER zer0_1s <2231233949@qq.com>
 
 RUN dpkg --add-architecture i386 && \
     apt-get -y update && \
