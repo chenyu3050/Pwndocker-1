@@ -68,6 +68,7 @@ RUN apt-add-repository ppa:brightbox/ruby-ng && \
 RUN ulimit -c 0
 RUN gem install one_gadget 
 RUN gem install seccomp-tools 
+RUN apt-get install -y python3-distutils
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
