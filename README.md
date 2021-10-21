@@ -19,7 +19,7 @@ docker run -d \
 	-v $(pwd)/${ctf_name}:/ctf/work \
 	-p 23947:23947 \
 	--cap-add=SYS_PTRACE \
-  --security-opt seccomp=unconfined \
+  	--security-opt seccomp=unconfined \
 	kder/pwndocker
 
 docker exec -it ${ctf_name} /bin/bash
