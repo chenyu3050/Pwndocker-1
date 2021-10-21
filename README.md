@@ -95,7 +95,7 @@ from pwn import *
 p = process(["/path/to/ld.so", "./test"], env={"LD_PRELOAD":"/path/to/libc.so.6"})
 ```
 
-### Others
+### notice
 some work to do : improve gdb
 you need to revise .gdbinit reference gdbinit in this .git
 
