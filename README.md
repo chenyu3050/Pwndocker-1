@@ -27,6 +27,16 @@ docker exec -it ${ctf_name} /bin/bash
 
 ```
 
+```
+docker run -it \
+	--rm \
+	-v $(pwd)/${ctf_name}:/ctf/work \ 
+	-p 23946:23946  \	
+	--privileged  \
+	--cap-add=SYS_PTRACE \
+  	--security-opt seccomp=unconfined \
+	pwndocker  
+```
 
 ### included software
 
