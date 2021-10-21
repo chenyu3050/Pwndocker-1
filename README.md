@@ -11,6 +11,11 @@ cd Pwndocker
 docker build -t pwndocker .
 docker run -it -v -v $(pwd)/${ctf_name}:/ctf/work -p 23946:23946 --privileged --cap-add=SYS_PRTACE pwndocker
 ```
+### docker
+
+```
+docker pull kder/pwndocker
+```
 
 ### included software
 
