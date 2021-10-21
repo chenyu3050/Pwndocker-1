@@ -100,8 +100,8 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/too
 
 RUN git config --global http.sslverify false
 
-RUN git clone  https://github.com.cnpmjs.org/1094093288/gdb321.git && \
-    cd gdb321/ && ./run_gdb.sh install && ./Switchdefault.sh pwndbg
+RUN git clone  https://github.com.cnpmjs.org/chenyu3050/gdb321.git && \
+    cd gdb321/ && chmod +777 *.sh && ./run_gdb.sh install && ./Switchdefault.sh pwndbg
 
 RUN git clone https://github.com/niklasb/libc-database.git libc-database && \
     cd libc-database && ./get || echo "/libc-database/" > ~/.libcdb_path
