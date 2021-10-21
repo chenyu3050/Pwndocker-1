@@ -96,4 +96,8 @@ p = process(["/path/to/ld.so", "./test"], env={"LD_PRELOAD":"/path/to/libc.so.6"
 ```
 
 ### Others
-If you really have some new and useful tools need to add in the pwndocker, please submit issue, thanks.
+some work to do : improve gdb
+you need to revise .gdbinit
+```
+
+```
