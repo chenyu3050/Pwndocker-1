@@ -100,12 +100,17 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/too
 
 RUN git config --global http.sslverify false
 
-RUN git clone  https://github.com.cnpmjs.org/chenyu3050/gdb321.git && \
-    cd gdb321/ && chmod +777 *.sh && ./run_gdb.sh install && ./Switchdefault.sh pwndbg
+RUN git clone  https://github.com.cnpmjs.org/scwuaptx/Pwngdb.git  /root/Pwngdb && \
+    cd /root/Pwngdb && cat /root/Pwngdb/.gdbinit  >> /root/.gdbinit && \
+    sed -i "s?source ~/peda/peda.py?# source ~/peda/peda.py?g" /root/.gdbinit
 
-RUN git clone https://github.com/niklasb/libc-database.git libc-database && \
+RUN git clone https://github.com.cnpmjs.org/longld/peda.git  ~/peda
+
+RUN git clone  https://github.com.cnpmjs.org/pwndbg/pwndbg.git && \
+    cd pwndbg &&  ./setup.sh
+
+RUN git clone https://github.com.cnpmjs.org/niklasb/libc-database.git libc-database && \
     cd libc-database && ./get || echo "/libc-database/" > ~/.libcdb_path
-
 
 WORKDIR /ctf/work/
 
