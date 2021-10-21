@@ -97,7 +97,5 @@ p = process(["/path/to/ld.so", "./test"], env={"LD_PRELOAD":"/path/to/libc.so.6"
 
 ### Others
 some work to do : improve gdb
-you need to revise .gdbinit
-```
+you need to revise .gdbinit reference gdbinit in this .git
 
-```
