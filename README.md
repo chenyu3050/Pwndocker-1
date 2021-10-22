@@ -8,7 +8,7 @@ A docker environment for pwn in ctf based on **phusion/baseimage**, which is a m
 
 
 ```
-docker pull kder/pwndocker:1.0
+docker pull kder/pwndocker
 ```
 
 
